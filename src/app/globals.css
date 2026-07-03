@@ -15,7 +15,8 @@
   --color-border: var(--color-border);
   --color-accent: var(--color-accent);
   --font-sans: var(--font-sans);
-  --font-display: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-display: var(--font-serif);
 }
 
 * {
