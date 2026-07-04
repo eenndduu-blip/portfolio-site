@@ -4,7 +4,6 @@ import { RomeStudyIntro } from "@/components/RomeStudyIntro";
 import { RomeStudySection, type RomeStudy } from "@/components/RomeStudySection";
 import { VeniceHero } from "@/components/VeniceHero";
 import { PorticoDescriptionNote } from "@/components/PorticoDescriptionNote";
-import { CivitaHero } from "@/components/CivitaHero";
 import { PompeiiHero } from "@/components/PompeiiHero";
 
 const venice: RomeStudy = {
@@ -21,22 +20,9 @@ const venice: RomeStudy = {
   ],
 };
 
-const houseInCivita: RomeStudy = {
-  slug: "house-in-civita",
-  number: "04",
-  title: "A House in Civita.",
-  meta: "Watercolor Study · Civita di Bagnoregio, IT · 2026",
-  watercolor: "/art/rome/rome-07.png",
-  paragraphs: [
-    "For this watercolor, I focused on a small house in Civita di Bagnoregio. It was not a famous monument or a grand building — its white wall, wooden door, small window, tiled roof, and bare tree created a calm scene that showed the everyday beauty of Civita.",
-    "The worn stone near the ground, the old roof tiles, and the texture of the door made me think about how people have lived in this hilltop town for generations. Civita's beauty is not only in its dramatic view from the bridge — it is also in these small domestic moments.",
-    "This small house reminded me that architecture does not always need to be monumental to be powerful. Sometimes a simple doorway, a window, and a tree can tell the story of a place.",
-  ],
-};
-
 const piazzaDelPopolo: RomeStudy = {
   slug: "piazza-del-popolo",
-  number: "06",
+  number: "04",
   title: "Piazza del Popolo.",
   meta: "Watercolor Study · Rome, IT · 2026",
   watercolor: "/art/rome/rome-11.png",
@@ -49,7 +35,7 @@ const piazzaDelPopolo: RomeStudy = {
 
 const paestum: RomeStudy = {
   slug: "paestum",
-  number: "08",
+  number: "06",
   title: "Paestum.",
   meta: "Watercolor Study · Paestum, IT · 2026",
   watercolor: "/art/rome/rome-15.png",
@@ -62,7 +48,7 @@ const paestum: RomeStudy = {
 
 const amalfi: RomeStudy = {
   slug: "amalfi-coast",
-  number: "09",
+  number: "07",
   title: "Amalfi Coast.",
   meta: "Watercolor Study · Amalfi, IT · 2026",
   watercolor: "/art/rome/rome-17.png",
@@ -76,7 +62,7 @@ const amalfi: RomeStudy = {
 
 const cornerStone: RomeStudy = {
   slug: "the-corner-stone",
-  number: "10",
+  number: "08",
   title: "The Corner Stone.",
   meta: "Watercolor Study · Rome, IT · 2026",
   watercolor: "/art/rome/rome-19.png",
@@ -114,14 +100,10 @@ export default function ArtPage() {
 
         <PorticoDescriptionNote />
 
-        <RomeStudySection study={houseInCivita} index={1} />
-
-        <CivitaHero />
-
         <PompeiiHero />
 
         {laterStudies.map((study, i) => (
-          <RomeStudySection key={study.slug} study={study} index={i + 2} />
+          <RomeStudySection key={study.slug} study={study} index={i + 1} />
         ))}
       </main>
       <Footer />
