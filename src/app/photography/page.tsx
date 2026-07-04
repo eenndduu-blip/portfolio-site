@@ -1,7 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { YellowCircle } from "@/components/YellowCircle";
-import { FadeIn, CrossFade } from "@/components/motion-helpers";
+import { FadeIn } from "@/components/motion-helpers";
 import { PlaceGallery, type Place } from "@/components/PlaceGallery";
 import Image from "next/image";
 
@@ -54,24 +54,34 @@ const places: Place[] = [
 ];
 
 export default function PhotographyPage() {
-  const heroImage = places[0].photos[0];
-
   return (
     <>
       <Nav />
       <main className="flex-1">
-        <section className="relative px-6 md:px-10 pt-16 md:pt-24 pb-12 md:pb-20 overflow-hidden">
-          <YellowCircle
-            size="min(46vw, 500px)"
-            className="top-[10%] right-[-8%]"
+        <section className="relative min-h-[92svh] flex flex-col justify-end px-6 md:px-10 pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden text-white">
+          <Image
+            src="/photos/venice/photo-01.jpg"
+            alt="Venice — featured landscape"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover grayscale contrast-[1.05] -z-10"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/80 -z-10" />
+
+          <YellowCircle
+            size="min(38vw, 420px)"
+            className="top-[8%] right-[-6%]"
+            opacity={0.55}
+          />
+
           <FadeIn>
-            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-muted)]">
+            <p className="text-[11px] uppercase tracking-[0.24em] text-white/75">
               Photography &nbsp;&mdash;&nbsp; {places.length} places
             </p>
           </FadeIn>
           <FadeIn delay={0.08}>
-            <h1 className="mt-4 font-display text-[clamp(3rem,11vw,10rem)] leading-[0.9] tracking-[-0.03em]">
+            <h1 className="mt-4 font-display text-[clamp(3rem,11vw,10rem)] leading-[0.9] tracking-[-0.03em] text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
               Quiet,
               <br />
               attentive
@@ -80,26 +90,13 @@ export default function PhotographyPage() {
             </h1>
           </FadeIn>
           <FadeIn delay={0.16}>
-            <p className="mt-10 max-w-xl text-sm md:text-base text-[var(--color-muted)] leading-relaxed">
+            <p className="mt-10 max-w-xl text-sm md:text-base text-white/80 leading-relaxed">
               Images made in transit across northern Italy &mdash; Venice,
               Verona, Ferrara, Rome, and Orvieto. Each place organized as
               its own short set.
             </p>
           </FadeIn>
         </section>
-
-        <CrossFade>
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
-            <Image
-              src={heroImage}
-              alt="Featured photograph"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-        </CrossFade>
 
         {places.map((place, i) => (
           <PlaceGallery key={place.slug} place={place} index={i} />
