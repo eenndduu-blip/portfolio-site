@@ -53,8 +53,8 @@ const press = [
 
 const socials = [
   { label: "Email", href: "mailto:wedeendu@hotmail.com" },
-  { label: "Instagram", href: "https://instagram.com/your.handle" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/endale-mulugeta-5924107b" },
+  { label: "Instagram", href: "https://www.instagram.com/e.n.d.a.l.e/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/endale-bekele-5924107b/" },
 ];
 
 export default function Home() {
@@ -185,9 +185,9 @@ export default function Home() {
               <span
                 className="block bg-clip-text text-transparent"
                 style={{
-                  backgroundImage: `url(/portrait-brick.png)`,
-                  backgroundSize: "280% auto",
-                  backgroundPosition: "55% 35%",
+                  backgroundImage: `linear-gradient(rgba(237, 194, 49, 0.55), rgba(237, 194, 49, 0.85)), url(/portrait-brick.png)`,
+                  backgroundSize: "cover, 280% auto",
+                  backgroundPosition: "center, 55% 35%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
