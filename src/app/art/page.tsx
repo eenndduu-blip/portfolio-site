@@ -95,12 +95,12 @@ export default function ArtPage() {
       className="flex flex-col min-h-screen"
       style={
         {
-          "--color-bg": "#0a0a0a",
-          "--color-fg": "#f2f2f0",
-          "--color-muted": "#8a8a80",
-          "--color-border": "rgba(255, 255, 255, 0.10)",
-          background: "#0a0a0a",
-          color: "#f2f2f0",
+          "--color-bg": "#ffffff",
+          "--color-fg": "#0f0f0f",
+          "--color-muted": "#6b6b6b",
+          "--color-border": "rgba(15, 15, 15, 0.10)",
+          background: "#ffffff",
+          color: "#0f0f0f",
         } as React.CSSProperties
       }
     >

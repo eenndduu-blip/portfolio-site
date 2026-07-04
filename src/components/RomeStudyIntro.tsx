@@ -77,8 +77,8 @@ export function RomeStudyIntro() {
           className="md:col-span-5 relative w-full aspect-[4/3] bg-white shadow-[0_40px_120px_-30px_rgba(0,0,0,0.4)]"
         >
           <Image
-            src="/art/rome/rome-01.png"
-            alt="A Watercolor Study — Roman Palimpsest Program cover"
+            src="/art/civita-sunset.png"
+            alt="Civita di Bagnoregio at sunset — featured watercolor"
             fill
             priority
             sizes="(min-width: 768px) 40vw, 100vw"
