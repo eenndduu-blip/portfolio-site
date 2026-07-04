@@ -12,12 +12,13 @@ export function RomeStudyIntro() {
   return (
     <section className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden text-white">
       <Image
-        src="/art/rome/rome-17.png"
-        alt="Amalfi Coast — featured watercolor"
+        src="/art/art-hero-bg.png"
+        alt="A house in Civita — featured watercolor"
         fill
         priority
         sizes="100vw"
         className="object-cover grayscale contrast-[1.06] -z-10"
+        style={{ objectPosition: "center 40%" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/85 -z-10" />
 
