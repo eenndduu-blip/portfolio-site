@@ -123,45 +123,19 @@ export default function Home() {
 
         <div className="relative flex flex-col justify-center px-8 md:px-16 py-20 md:py-0">
           <motion.h1
-            className="relative flex flex-col items-start gap-3 md:gap-4"
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            {...fadeUp(0.35)}
+            className="uppercase font-light text-[#f2ede0] text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] tracking-[0.04em]"
           >
-            <motion.span
-              initial={reduce ? false : { clipPath: "inset(0 100% 0 0)" }}
-              animate={{ clipPath: "inset(0 0% 0 0)" }}
-              transition={{ duration: 1.6, delay: 0.3, ease }}
-              className="font-serif font-light text-[#edc231] text-[clamp(2.75rem,7.5vw,6rem)] leading-[0.9] tracking-[0.38em] pr-[0.38em]"
-              style={{ WebkitTextStroke: "0.5px rgba(237,194,49,0.9)" }}
-            >
-              E N D A L E
-            </motion.span>
-
-            <motion.span
-              aria-hidden
-              initial={reduce ? false : { scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.9, delay: 1.7, ease }}
-              className="block h-px w-32 md:w-40 bg-[#edc231] origin-left"
-            />
-
-            <motion.span
-              initial={reduce ? false : { opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 2.05, ease }}
-              className="text-[#edc231] text-[clamp(1.75rem,4vw,3rem)] leading-[1] -mt-1 md:-mt-2 pl-[8%] md:pl-[14%]"
-              style={{ fontFamily: "var(--font-script)" }}
-            >
-              Bekele
-            </motion.span>
+            Endale
+            <br />
+            Bekele
           </motion.h1>
 
           <motion.p
-            {...fadeUp(2.5)}
-            className="mt-8 md:mt-10 text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-[#e6e6e0] font-bold"
+            {...fadeUp(0.85)}
+            className="mt-8 md:mt-10 text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-[#c8c8bf] font-bold"
           >
-            &mdash; Architectural Designer &amp; Artist
+            Architectural Designer &amp; Artist
           </motion.p>
 
           <motion.div
