@@ -12,7 +12,7 @@ export function RomeStudyIntro() {
   return (
     <section className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden text-white">
       <Image
-        src="/art/art-hero-bg.png"
+        src="/art/hero-house-civita.png"
         alt="A house in Civita — featured watercolor"
         fill
         priority
