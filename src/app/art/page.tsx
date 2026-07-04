@@ -20,6 +20,35 @@ const venice: RomeStudy = {
   ],
 };
 
+const houseInCivita: RomeStudy = {
+  slug: "house-in-civita",
+  number: "02",
+  title: "A House in Civita.",
+  meta: "Watercolor Study · Civita di Bagnoregio, IT · 2026",
+  watercolor: "/art/hero-house-civita.png",
+  paragraphs: [
+    "For this watercolor, I focused on a small house in Civita di Bagnoregio. It was not a famous monument or a grand building, but that is what made it meaningful to me. The house felt quiet, simple, and deeply connected to the town. Its white wall, wooden door, small window, tiled roof, and bare tree created a calm scene that showed the everyday beauty of Civita.",
+    "What I liked most was the stillness of the place. The house looked ordinary, but it carried the feeling of time. The worn stone near the ground, the old roof tiles, and the texture of the door made me think about how people have lived in this hilltop town for generations. Civita's beauty is not only in its dramatic view from the bridge or its position on the cliff — it is also in these small domestic moments.",
+    "Painting this house helped me slow down and notice details I might have missed. Through watercolor, I tried to capture the softness of the wall, the shadow of the tree, and the quiet atmosphere of the street. This small house reminded me that architecture does not always need to be monumental to be powerful. Sometimes, a simple doorway, a window, and a tree can tell the story of a place.",
+  ],
+};
+
+const civita: RomeStudy = {
+  slug: "civita",
+  number: "03",
+  title: "Civita.",
+  subtitle: "Civita di Bagnoregio",
+  meta: "Watercolor Study · Civita di Bagnoregio, IT · 2026",
+  watercolor: "/art/civita-featured.png",
+  aspect: "aspect-[3/2]",
+  paragraphs: [
+    "Standing at the edge of Civita di Bagnoregio, I understood why hill towns carry such strong architectural imagination. The city does not simply sit on the landscape; it rises out of it. From a distance, Civita looks almost impossible — a small stone settlement balanced on a hilltop, surrounded by valleys, cliffs, and erosion.",
+    "What struck me first was the city's isolation. Civita is connected only by a narrow pedestrian bridge, which makes arrival slow and intentional. In Rome, historical layers are often hidden inside dense streets and crowded piazzas; in Civita the layers are exposed through the cliff itself. The town feels like a fragment of history still holding on to the edge of the earth.",
+    "This visit also became meaningful because of Astra Zarina's legacy. Through 'Rome and the Teacher,' I understood that the UW Architecture in Rome program was not only about studying old buildings, but about learning how to see — walking, observing, drawing, eating, listening, and living with architecture.",
+    "My watercolor tried to hold onto that feeling. Watercolor felt right because Civita itself feels delicate. The soft washes captured the hills, warm stone, bridge, and distance better than a technical drawing could. Painting forced me to slow down and look carefully. Through watercolor, I was not just recording the city — I was learning how it felt.",
+  ],
+};
+
 const piazzaDelPopolo: RomeStudy = {
   slug: "piazza-del-popolo",
   number: "04",
@@ -35,7 +64,7 @@ const piazzaDelPopolo: RomeStudy = {
 
 const paestum: RomeStudy = {
   slug: "paestum",
-  number: "06",
+  number: "05",
   title: "Paestum.",
   meta: "Watercolor Study · Paestum, IT · 2026",
   watercolor: "/art/rome/rome-15.png",
@@ -48,7 +77,7 @@ const paestum: RomeStudy = {
 
 const amalfi: RomeStudy = {
   slug: "amalfi-coast",
-  number: "07",
+  number: "06",
   title: "Amalfi Coast.",
   meta: "Watercolor Study · Amalfi, IT · 2026",
   watercolor: "/art/rome/rome-17.png",
@@ -62,7 +91,7 @@ const amalfi: RomeStudy = {
 
 const cornerStone: RomeStudy = {
   slug: "the-corner-stone",
-  number: "08",
+  number: "07",
   title: "The Corner Stone.",
   meta: "Watercolor Study · Rome, IT · 2026",
   watercolor: "/art/rome/rome-19.png",
@@ -100,10 +129,14 @@ export default function ArtPage() {
 
         <PorticoDescriptionNote />
 
+        <RomeStudySection study={houseInCivita} index={1} />
+
+        <RomeStudySection study={civita} index={2} />
+
         <PompeiiHero />
 
         {laterStudies.map((study, i) => (
-          <RomeStudySection key={study.slug} study={study} index={i + 1} />
+          <RomeStudySection key={study.slug} study={study} index={i + 3} />
         ))}
       </main>
       <Footer />

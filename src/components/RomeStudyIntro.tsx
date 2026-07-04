@@ -10,19 +10,19 @@ export function RomeStudyIntro() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden text-white">
+    <section className="relative w-full min-h-[100svh] flex flex-col justify-end overflow-hidden text-white isolate">
       <Image
         src="/art/hero-house-civita.png"
         alt="A house in Civita — featured watercolor"
         fill
         priority
         sizes="100vw"
-        className="object-cover grayscale contrast-[1.06] -z-10"
-        style={{ objectPosition: "center 40%" }}
+        className="object-cover grayscale contrast-[1.06]"
+        style={{ objectPosition: "center 40%", zIndex: 0 }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/85 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/85" style={{ zIndex: 1 }} />
 
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
         <YellowCircle
           size="min(38vw, 420px)"
           className="top-[10%] right-[-6%]"
@@ -37,7 +37,7 @@ export function RomeStudyIntro() {
         />
       </div>
 
-      <div className="relative px-6 md:px-12 pt-24 md:pt-32 pb-16 md:pb-20">
+      <div className="relative px-6 md:px-12 pt-24 md:pt-32 pb-16 md:pb-20" style={{ zIndex: 2 }}>
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
