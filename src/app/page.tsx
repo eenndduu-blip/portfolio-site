@@ -124,11 +124,11 @@ export default function Home() {
         <div className="relative flex flex-col justify-center px-8 md:px-16 py-20 md:py-0">
           <motion.h1
             {...fadeUp(0.35)}
-            className="uppercase font-light text-[#f2ede0] text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] tracking-[0.04em]"
+            className="uppercase text-[#f2ede0] text-[clamp(2rem,6vw,4.75rem)] leading-[0.98] tracking-[0.04em]"
           >
-            Endale
+            <span className="font-thin">Endale</span>
             <br />
-            Bekele
+            <span className="font-light">Bekele</span>
           </motion.h1>
 
           <motion.p
