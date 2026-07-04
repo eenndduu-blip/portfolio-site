@@ -94,9 +94,9 @@ export default function Home() {
       <header className="fixed top-0 inset-x-0 z-50 grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-6 md:px-10 py-5 md:py-6 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-[2px]">
         <Link
           href="/"
-          className="text-[13px] uppercase tracking-[0.24em] text-[#e6e6e0] hover:text-white transition-colors"
+          className="font-black lowercase tracking-[-0.08em] text-[clamp(20px,2vw,28px)] text-[#e6e6e0] hover:text-white transition-colors cursor-pointer"
         >
-          Endale.
+          endale.
         </Link>
         <nav className="hidden md:flex justify-center gap-10 text-[11px] uppercase tracking-[0.24em] text-[#c8c8bf]">
           <Link href="/art" className="hover:text-white transition-colors">
