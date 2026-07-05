@@ -18,9 +18,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name — Art, Architecture & Photography",
+  title: "Endale Bekele — Architecture, Art & Photography",
   description:
-    "Selected work spanning fine art, architecture, and photography.",
+    "Portfolio of Endale Bekele — architectural design, watercolor studies, and photography.",
 };
 
 export default function RootLayout({
