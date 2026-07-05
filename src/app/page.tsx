@@ -1,18 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import { Nav } from "@/components/Nav";
 
 const ease = [0.16, 1, 0.3, 1] as const;
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/art", label: "Art" },
-  { href: "/photography", label: "Photo" },
-  { href: "/architecture", label: "Architecture" },
-];
 
 const bioParagraphs = [
   "Endale Bekele is an architectural designer and Master of Architecture graduate from the University of Washington.",
@@ -67,14 +60,6 @@ const socials = [
 
 export default function Home() {
   const reduce = useReducedMotion();
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
 
   const fadeUp = (delay = 0, y = 24) => ({
     initial: reduce ? false : { opacity: 0, y },
@@ -90,88 +75,20 @@ export default function Home() {
   });
 
   return (
-    <div className="relative bg-[#0a0a0a] text-[#f2f2f0] font-sans overflow-x-hidden">
-      <header className="fixed top-0 inset-x-0 z-50 grid grid-cols-[1fr_auto_1fr] items-center gap-6 px-6 md:px-10 py-5 md:py-6 bg-gradient-to-b from-black/70 to-transparent backdrop-blur-[2px]">
-        <Link
-          href="/"
-          className="font-black lowercase tracking-[-0.08em] text-[clamp(20px,2vw,28px)] text-[#e6e6e0] hover:text-white transition-colors cursor-pointer"
-        >
-          endale.
-        </Link>
-        <nav className="hidden md:flex justify-center gap-10 text-[11px] uppercase tracking-[0.24em] text-[#c8c8bf]">
-          <Link href="/art" className="hover:text-white transition-colors">
-            Art
-          </Link>
-          <Link href="/photography" className="hover:text-white transition-colors">
-            Photo
-          </Link>
-          <Link
-            href="/architecture"
-            className="hover:text-white transition-colors"
-          >
-            Architecture
-          </Link>
-        </nav>
-        <a
-          href="mailto:wedeendu@hotmail.com"
-          className="hidden md:block justify-self-end text-[11px] uppercase tracking-[0.24em] text-[#c8c8bf] hover:text-white transition-colors"
-        >
-          Contact
-        </a>
-
-        <button
-          type="button"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((v) => !v)}
-          className="md:hidden justify-self-end w-[26px] grid gap-[5px] cursor-pointer bg-transparent border-0 p-0"
-        >
-          <span
-            className={`block h-[2px] bg-[#f2f2f0] rounded-sm transition-transform duration-300 ${
-              menuOpen ? "translate-y-[7px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-[2px] bg-[#f2f2f0] rounded-sm transition-opacity duration-200 ${
-              menuOpen ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`block h-[2px] bg-[#f2f2f0] rounded-sm transition-transform duration-300 ${
-              menuOpen ? "-translate-y-[7px] -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </header>
-
-      <div
-        className={`md:hidden fixed inset-0 top-0 bg-[#0a0a0a] z-40 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <ul className="flex flex-col px-6 pt-24">
-          {navLinks.map((l) => (
-            <li key={l.href} className="border-b border-white/10">
-              <Link
-                href={l.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-5 text-3xl uppercase tracking-wide text-[#f2f2f0] cursor-pointer"
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
-          <li className="border-b border-white/10">
-            <a
-              href="mailto:wedeendu@hotmail.com"
-              onClick={() => setMenuOpen(false)}
-              className="block py-5 text-3xl uppercase tracking-wide text-[#f2f2f0] cursor-pointer"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div
+      className="relative font-sans overflow-x-hidden"
+      style={
+        {
+          "--color-bg": "#0a0a0a",
+          "--color-fg": "#f2f2f0",
+          "--color-muted": "#8a8a80",
+          "--color-border": "rgba(255, 255, 255, 0.10)",
+          background: "#0a0a0a",
+          color: "#f2f2f0",
+        } as React.CSSProperties
+      }
+    >
+      <Nav />
 
       <section className="relative min-h-[100svh] grid grid-cols-1 md:grid-cols-2 gap-0">
         <motion.div
