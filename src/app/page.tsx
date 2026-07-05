@@ -166,9 +166,9 @@ export default function Home() {
               <span
                 className="block bg-clip-text text-transparent"
                 style={{
-                  backgroundImage: `linear-gradient(rgba(237, 194, 49, 0.55), rgba(237, 194, 49, 0.85)), url(/portrait-brick.png)`,
-                  backgroundSize: "cover, 280% auto",
-                  backgroundPosition: "center, 55% 35%",
+                  backgroundImage: `url(/portrait-brick.png)`,
+                  backgroundSize: "260% auto",
+                  backgroundPosition: "85% 45%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
