@@ -167,8 +167,8 @@ export default function Home() {
                 className="block bg-clip-text text-transparent"
                 style={{
                   backgroundImage: `url(/portrait-brick.png)`,
-                  backgroundSize: "260% auto",
-                  backgroundPosition: "85% 45%",
+                  backgroundSize: "300% auto",
+                  backgroundPosition: "100% 35%",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
