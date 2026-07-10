@@ -43,6 +43,7 @@ const press = [
     where: "WA Starter Home Plan's Townhouse Design Competition",
     date: "2026",
     body: "4-3-2 Homes — a modular townhouse for Washington's missing-middle housing needs.",
+    link: "https://starterhomeplan.org/news/winners-announced-in-townhouse-design-competition" as string | undefined,
   },
   {
     title: "Published Chapter",
