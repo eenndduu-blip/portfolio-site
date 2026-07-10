@@ -45,6 +45,13 @@ const press = [
     body: "4-3-2 Homes — a modular townhouse for Washington's missing-middle housing needs.",
   },
   {
+    title: "Published Chapter",
+    where: "Materials of Abolition — The ReView: Common Good, Ch. 7: Technology & Making",
+    date: "March 2026",
+    body: "Contributing researcher, material studies on abolition-oriented design practice. Tulane School of Architecture and Built Environment.",
+    link: "https://issuu.com/tulanearch/docs/chapter_7_-_technology_and_making" as string | undefined,
+  },
+  {
     title: "Study Abroad",
     where: "UW Architecture in Rome — Roman Palimpsest Program",
     date: "Autumn 2025",
@@ -355,6 +362,17 @@ export default function Home() {
                   <p className="text-[14px] leading-[1.65] text-[#c8c8bf] max-w-xl">
                     {p.body}
                   </p>
+                  {"link" in p && p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-3 text-[11px] uppercase tracking-[0.18em] text-[#e6e6e0] hover:text-white transition-colors cursor-pointer"
+                    >
+                      View chapter
+                      <span aria-hidden>&rarr;</span>
+                    </a>
+                  )}
                 </motion.article>
               ))}
             </div>
