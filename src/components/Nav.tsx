@@ -37,7 +37,7 @@ export function Nav() {
         aria-label="Endale Bekele — Home"
       >
         <Image
-          src="/logo.svg"
+          src="/logo-white.svg"
           alt=""
           width={32}
           height={32}
