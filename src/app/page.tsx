@@ -53,6 +53,13 @@ const press = [
     link: "https://issuu.com/tulanearch/docs/chapter_7_-_technology_and_making" as string | undefined,
   },
   {
+    title: "Book Design",
+    where: "Sugar Roots",
+    date: "Tulane SoA",
+    body: "Designed and published the book, produced through the Albert and Tina Small Center for Collaborative Design.",
+    link: "https://small.tulane.edu/project/sugarroots/" as string | undefined,
+  },
+  {
     title: "Study Abroad",
     where: "UW Architecture in Rome — Roman Palimpsest Program",
     date: "Autumn 2025",
