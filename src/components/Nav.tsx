@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LogoMark } from "./LogoMark";
 
 const links = [
   { href: "/", label: "Home" },
@@ -36,7 +36,14 @@ export function Nav() {
         className="flex items-center gap-2 cursor-pointer"
         aria-label="Endale Bekele — Home"
       >
-        <LogoMark className="h-[26px] w-auto md:h-[32px] text-[var(--color-fg)]" />
+        <Image
+          src="/logo.svg"
+          alt=""
+          width={32}
+          height={32}
+          className="h-[26px] w-[26px] md:h-[32px] md:w-[32px]"
+          priority
+        />
         <span className="font-black lowercase tracking-[-0.08em] text-[clamp(16px,1.6vw,22px)]">
           endale.
         </span>
