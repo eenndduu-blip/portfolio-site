@@ -8,9 +8,10 @@ import { Nav } from "@/components/Nav";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const bioParagraphs = [
-  "It started with watercolors in elementary school — learning how light falls, how materials age, how places hold memory. That way of seeing still shapes everything I design.",
-  "What does a building remember? That's where every project starts for me — housing, cultural centers, public spaces, all designed to connect people with place. My work starts with people: how they gather, move, and belong. Then comes clear thinking, honest materials, and the know-how to get it built.",
-  "Seattle is my studio. Housing, neighborhoods in transition, old buildings waiting for second lives — that's the work that pulls me in. Buildings should hold memory, not just people. Architectural designer in Seattle, trained at the University of Washington.",
+  "It started with watercolors in elementary school, learning how light falls, how materials age, and how places hold meaning. That way of seeing still shapes everything I design.",
+  "What does a building remember? Every project begins with that question. Whether designing housing, cultural centers, or public spaces, I start with people: how they gather, move, and belong. From there, architecture takes shape through clear thinking, honest materials, and the discipline to turn ideas into places that last.",
+  "I believe architecture is more than solving problems or creating beautiful forms. At its best, it reflects the people who inhabit it, respects the history beneath it, and leaves something meaningful for those who come after.",
+  "I'm an architectural designer, trained at the University of Washington, committed to designing places that people don't simply occupy — they remember.",
 ];
 
 const works = [
