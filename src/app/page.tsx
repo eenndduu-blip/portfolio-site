@@ -8,9 +8,9 @@ import { Nav } from "@/components/Nav";
 const ease = [0.16, 1, 0.3, 1] as const;
 
 const bioParagraphs = [
-  "Endale Bekele is an architectural designer and Master of Architecture graduate from the University of Washington.",
-  "His work explores housing, adaptive reuse, and public-interest design, with experience in affordable housing, cultural centers, healthcare campuses, and community-focused urbanism in Seattle and Ethiopia.",
-  "Rooted in clear spatial thinking, visual storytelling, and practical construction knowledge, his design approach connects architecture with memory, place, and human experience. His watercolor studies from the UW Architecture in Rome program continue to inform the way he observes light, material, history, and the character of built environments.",
+  "It started with watercolors in elementary school — learning how light falls, how materials age, how places hold memory. That way of seeing still shapes everything I design.",
+  "What does a building remember? That's where every project starts for me — housing, cultural centers, public spaces, all designed to connect people with place. My work starts with people: how they gather, move, and belong. Then comes clear thinking, honest materials, and the know-how to get it built.",
+  "Seattle is my studio. Housing, neighborhoods in transition, old buildings waiting for second lives — that's the work that pulls me in. Buildings should hold memory, not just people. Architectural designer in Seattle, trained at the University of Washington.",
 ];
 
 const works = [
