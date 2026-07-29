@@ -6,10 +6,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Home" },
+  { href: "/architecture", label: "Architecture" },
   { href: "/art", label: "Art" },
   { href: "/photography", label: "Photo" },
-  { href: "/architecture", label: "Architecture" },
+  { href: "/", label: "Home" },
 ];
 
 export function Nav() {
@@ -28,12 +28,11 @@ export function Nav() {
   }, [pathname]);
 
   return (
-    <header
-      className="relative z-50 grid items-center grid-cols-[1fr_auto_1fr] gap-6 px-[18px] md:px-[34px] pt-[22px] pb-3 bg-[var(--color-bg)]"
-    >
+    <>
+      <header className="sticky top-0 z-50 flex items-center justify-between gap-6 px-[18px] md:px-[34px] py-4 md:py-5 bg-[#0a0a0a] text-[#f2f2f0] border-b border-white/15">
       <Link
         href="/"
-        className="flex items-center gap-2 cursor-pointer"
+        className="flex items-center gap-2 cursor-pointer shrink-0"
         aria-label="Endale Bekele — Home"
       >
         <Image
@@ -51,7 +50,7 @@ export function Nav() {
 
       <nav
         aria-label="Main navigation"
-        className="hidden md:flex justify-center gap-[clamp(22px,3vw,44px)] text-[15px] uppercase tracking-[0.06em] font-semibold"
+        className="hidden md:flex justify-center gap-[clamp(22px,3vw,44px)] text-[15px] uppercase tracking-[0.06em] font-semibold absolute left-1/2 -translate-x-1/2"
       >
         {links.map((l) => {
           const active = pathname === l.href;
@@ -59,8 +58,8 @@ export function Nav() {
             <Link
               key={l.href}
               href={l.href}
-              className={`text-[var(--color-fg)] hover:opacity-55 transition-opacity ${
-                active ? "opacity-100" : ""
+              className={`hover:opacity-55 transition-opacity ${
+                active ? "text-[#edc231]" : "text-[#f2f2f0]"
               }`}
             >
               {l.label}
@@ -74,36 +73,40 @@ export function Nav() {
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="justify-self-end w-[31px] grid gap-[6px] cursor-pointer bg-transparent border-0 p-0"
+        className="shrink-0 ml-auto w-[31px] grid gap-[6px] cursor-pointer bg-transparent border-0 p-0"
       >
         <span
-          className={`block h-1 bg-[var(--color-fg)] rounded-sm transition-transform duration-300 ${
+          className={`block h-1 bg-[#f2f2f0] rounded-sm transition-transform duration-300 ${
             open ? "translate-y-[10px] rotate-45" : ""
           }`}
         />
         <span
-          className={`block h-1 bg-[var(--color-fg)] rounded-sm transition-opacity duration-200 ${
+          className={`block h-1 bg-[#f2f2f0] rounded-sm transition-opacity duration-200 ${
             open ? "opacity-0" : "opacity-100"
           }`}
         />
         <span
-          className={`block h-1 bg-[var(--color-fg)] rounded-sm transition-transform duration-300 ${
+          className={`block h-1 bg-[#f2f2f0] rounded-sm transition-transform duration-300 ${
             open ? "-translate-y-[10px] -rotate-45" : ""
           }`}
         />
-      </button>
+        </button>
+      </header>
 
       <div
-        className={`md:hidden fixed inset-0 top-[60px] bg-[var(--color-bg)] z-40 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className="fixed inset-0 bg-[#0a0a0a] text-[#f2f2f0] z-40 overflow-y-auto"
+        style={{
+          transform: open ? "translateX(0%)" : "translateX(100%)",
+          visibility: open ? "visible" : "hidden",
+          transition: open
+            ? "transform 300ms cubic-bezier(0.16,1,0.3,1), visibility 0s"
+            : "transform 300ms cubic-bezier(0.16,1,0.3,1), visibility 0s 300ms",
+        }}
+        aria-hidden={!open}
       >
-        <ul className="flex flex-col px-6 pt-10">
+        <ul className="flex flex-col px-6 md:px-[34px] pt-[100px] md:pt-[130px] pb-10 md:max-w-md">
           {links.map((l) => (
-            <li
-              key={l.href}
-              className="border-b border-[var(--color-border)]"
-            >
+            <li key={l.href} className="border-b border-white/15">
               <Link
                 href={l.href}
                 onClick={() => setOpen(false)}
@@ -113,8 +116,17 @@ export function Nav() {
               </Link>
             </li>
           ))}
+          <li className="border-b border-white/15">
+            <a
+              href="mailto:wedeendu@hotmail.com"
+              onClick={() => setOpen(false)}
+              className="block py-5 text-3xl font-black lowercase tracking-[-0.04em] cursor-pointer"
+            >
+              contact
+            </a>
+          </li>
         </ul>
       </div>
-    </header>
+    </>
   );
 }
