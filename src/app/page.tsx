@@ -106,27 +106,30 @@ export default function Home() {
     >
       <Nav />
 
-      <section className="relative min-h-[100svh] grid grid-cols-1 md:grid-cols-2 gap-0">
+      <section className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden">
         <motion.div
-          {...fadeUp(0.1, 40)}
-          className="relative w-full h-[70svh] md:h-[100svh]"
+          initial={reduce ? false : { opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, ease }}
+          className="absolute inset-0"
         >
           <Image
-            src="/portrait-brick.png"
-            alt="Endale Bekele"
+            src="/site-plan-hero.jpg"
+            alt="Rainier Beach Water Quality Field Lab — site plan"
             fill
             priority
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover grayscale contrast-110"
-            style={{ objectPosition: "60% 40%" }}
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: "center 40%" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-[#0a0a0a]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/55 to-[#0a0a0a]/20" />
+          <div className="absolute inset-0 bg-[#0a0a0a]/25" />
         </motion.div>
 
-        <div className="relative flex flex-col justify-center px-8 md:px-16 py-20 md:py-0">
+        <div className="relative px-8 md:px-16 pb-20 md:pb-24 pt-40 md:pt-0">
           <motion.h1
             {...fadeUp(0.35)}
-            className="uppercase text-[#f2ede0] text-[clamp(2rem,6vw,4.75rem)] leading-[0.98] tracking-[0.04em]"
+            className="uppercase text-[#f2ede0] text-[clamp(2rem,6vw,4.75rem)] leading-[0.98] tracking-[0.04em] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]"
           >
             <span className="font-thin">Endale</span>
             <br />
@@ -135,14 +138,14 @@ export default function Home() {
 
           <motion.p
             {...fadeUp(0.85)}
-            className="mt-8 md:mt-10 text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-[#c8c8bf] font-bold"
+            className="mt-8 md:mt-10 text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-[#e6e6e0] font-bold"
           >
             Architectural Designer &amp; Artist
           </motion.p>
 
           <motion.div
             {...fadeUp(0.75)}
-            className="mt-16 md:mt-24 flex flex-col gap-2 text-[11px] uppercase tracking-[0.22em] text-[#8a8a80]"
+            className="mt-16 md:mt-24 flex flex-col gap-2 text-[11px] uppercase tracking-[0.22em] text-[#d8d8d0]"
           >
             <span>Seattle, WA</span>
             <span>M. Arch &middot; UW &middot; 2026</span>
