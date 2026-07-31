@@ -6,7 +6,13 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-export function ArchitectureBook({ pages }: { pages: string[] }) {
+export function ArchitectureBook({
+  pages,
+  label = "Architectural Portfolio",
+}: {
+  pages: string[];
+  label?: string;
+}) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [zoomed, setZoomed] = useState(false);
@@ -100,11 +106,11 @@ export function ArchitectureBook({ pages }: { pages: string[] }) {
   }, [index, reduce]);
 
   return (
-    <section className="relative w-full bg-white text-[#0f0f0f] py-16 md:py-24 px-4 md:px-12">
+    <section className="relative w-full bg-white text-[#0f0f0f] px-4 md:px-12">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-8 md:mb-12">
           <p className="text-[11px] uppercase tracking-[0.2em] text-black/45">
-            Architectural Portfolio
+            {label}
           </p>
           <p className="text-[11px] uppercase tracking-[0.2em] text-black/45 tabular-nums">
             {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
