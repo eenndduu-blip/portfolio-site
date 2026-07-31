@@ -178,19 +178,19 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
           <motion.div {...inView()} className="md:col-span-5 relative">
-            <div
-              className="relative font-serif italic font-light leading-[0.85] text-[clamp(10rem,26vw,22rem)] tracking-[-0.04em] select-none"
-              aria-hidden
-            >
+            <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#141414]">
+              <Image
+                src="/portrait-brick.png"
+                alt="Endale Bekele"
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover grayscale-[15%]"
+                style={{ objectPosition: "60% 40%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/40 via-transparent to-transparent" />
               <span
-                className="block bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: `url(/portrait-brick.png)`,
-                  backgroundSize: "300% auto",
-                  backgroundPosition: "100% 35%",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+                aria-hidden
+                className="absolute bottom-4 left-4 font-accent text-[#edc231] text-2xl md:text-3xl tracking-[0.06em] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
               >
                 01
               </span>
