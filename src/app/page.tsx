@@ -142,33 +142,6 @@ export default function Home() {
           >
             Architectural Designer &amp; Artist
           </motion.p>
-
-          <motion.div
-            {...fadeUp(0.75)}
-            className="mt-16 md:mt-24 flex flex-col gap-2 text-[11px] uppercase tracking-[0.22em] text-[#d8d8d0]"
-          >
-            <span>Seattle, WA</span>
-            <span>M. Arch &middot; UW &middot; 2026</span>
-          </motion.div>
-
-          <motion.a
-            {...fadeUp(0.95)}
-            href="#biography"
-            className="inline-flex items-center gap-3 mt-16 md:mt-24 text-[11px] uppercase tracking-[0.24em] text-[#e6e6e0] hover:text-white transition-colors group cursor-pointer"
-          >
-            Scroll
-            <motion.span
-              animate={reduce ? undefined : { y: [0, 6, 0] }}
-              transition={
-                reduce
-                  ? undefined
-                  : { duration: 1.8, repeat: Infinity, ease: "easeInOut" }
-              }
-              aria-hidden
-            >
-              ↓
-            </motion.span>
-          </motion.a>
         </div>
       </section>
 
@@ -190,32 +163,26 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/40 via-transparent to-transparent" />
               <span
                 aria-hidden
-                className="absolute bottom-4 left-4 font-accent text-[#edc231] text-2xl md:text-3xl tracking-[0.06em] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+                className="absolute bottom-4 left-4 font-black text-[#edc231] text-2xl md:text-3xl tracking-[0.06em] drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
               >
                 01
               </span>
             </div>
-            <ul className="mt-8 md:mt-12 flex flex-col gap-2 text-[10px] uppercase tracking-[0.24em] text-[#8a8a80]">
-              <li>About</li>
-              <li>Background</li>
-              <li>Practice</li>
-              <li>Study Abroad</li>
-            </ul>
           </motion.div>
 
           <div className="md:col-span-6 md:col-start-7">
             <motion.p
               {...inView(0.05)}
-              className="text-[10px] uppercase tracking-[0.28em] text-[#8a8a80] mb-4"
+              className="text-[13px] md:text-[15px] font-extrabold uppercase tracking-[0.24em] text-[#e6e6e0] mb-4"
             >
               About Me
             </motion.p>
             <motion.h2
               {...inView(0.1)}
-              className="font-serif text-[clamp(2.75rem,5.5vw,4.5rem)] leading-[0.98] tracking-[-0.02em] mb-10 md:mb-14"
+              className="text-[clamp(2.75rem,5.5vw,4.5rem)] leading-[1.02] tracking-[-0.02em] mb-10 md:mb-14"
             >
               <span className="italic font-light">My</span>{" "}
-              <span className="font-light">Biography.</span>
+              <span className="font-bold">Biography.</span>
             </motion.h2>
 
             <div className="flex flex-col gap-6 md:gap-7 max-w-xl">
@@ -234,41 +201,14 @@ export default function Home() {
       </section>
 
       <section className="relative px-6 md:px-16 py-24 md:py-40 border-t border-[#1c1c1c]">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 md:mb-20">
-          <div>
-            <motion.p
-              {...inView()}
-              className="text-[10px] uppercase tracking-[0.28em] text-[#8a8a80] mb-4"
-            >
-              Selected Work
-            </motion.p>
-            <motion.h2
-              {...inView(0.08)}
-              className="font-serif text-[clamp(2.75rem,5.5vw,4.5rem)] leading-[0.98] tracking-[-0.02em]"
-            >
-              <span className="italic font-light">My</span>{" "}
-              <span className="font-light">Practice.</span>
-            </motion.h2>
-          </div>
-
-          <motion.div
-            {...inView(0.15)}
-            className="relative font-serif italic font-light leading-[0.85] text-[clamp(7rem,18vw,15rem)] tracking-[-0.04em] select-none order-first md:order-none"
-            aria-hidden
+        <div className="mb-14 md:mb-20">
+          <motion.h2
+            {...inView(0.08)}
+            className="text-[clamp(2.75rem,5.5vw,4.5rem)] leading-[1.02] tracking-[-0.02em]"
           >
-            <span
-              className="block bg-clip-text text-transparent"
-              style={{
-                backgroundImage: `url(/art/rome/rome-05.png)`,
-                backgroundSize: "260% auto",
-                backgroundPosition: "center center",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              02
-            </span>
-          </motion.div>
+            <span className="italic font-light">My</span>{" "}
+            <span className="font-bold">Practice.</span>
+          </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -285,7 +225,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-serif italic font-light text-[clamp(3rem,6vw,5rem)] text-white/95 drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
+                    <span className="italic font-light text-[clamp(3rem,6vw,5rem)] text-white/95 drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
                       {w.number}
                     </span>
                   </div>
@@ -294,7 +234,7 @@ export default function Home() {
                   <p className="text-[10px] uppercase tracking-[0.24em] text-[#8a8a80] mb-2">
                     Selected Work
                   </p>
-                  <p className="font-serif text-2xl md:text-3xl tracking-[-0.01em]">
+                  <p className="text-2xl md:text-3xl font-semibold tracking-[-0.01em]">
                     {w.title}
                   </p>
                   <p className="mt-1 text-[12px] text-[#c8c8bf]">
@@ -312,44 +252,19 @@ export default function Home() {
         className="relative px-6 md:px-16 py-24 md:py-40 border-t border-[#1c1c1c]"
       >
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
-          <motion.div {...inView()} className="md:col-span-5 relative">
-            <div
-              className="relative font-serif italic font-light leading-[0.85] text-[clamp(10rem,26vw,22rem)] tracking-[-0.04em] select-none"
-              aria-hidden
-            >
-              <span
-                className="block bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: `url(/architecture/pages/page-05.png)`,
-                  backgroundSize: "260% auto",
-                  backgroundPosition: "center center",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                03
-              </span>
-            </div>
-            <ul className="mt-8 md:mt-12 flex flex-col gap-2 text-[10px] uppercase tracking-[0.24em] text-[#8a8a80]">
-              <li>Recognition</li>
-              <li>Study Abroad</li>
-              <li>Recent Work</li>
-            </ul>
-          </motion.div>
-
-          <div className="md:col-span-6 md:col-start-7">
+          <div className="md:col-span-8">
             <motion.p
               {...inView(0.05)}
-              className="text-[10px] uppercase tracking-[0.28em] text-[#8a8a80] mb-4"
+              className="text-[13px] md:text-[15px] font-extrabold uppercase tracking-[0.24em] text-[#e6e6e0] mb-4"
             >
               Highlights
             </motion.p>
             <motion.h2
               {...inView(0.1)}
-              className="font-serif text-[clamp(2.75rem,5.5vw,4.5rem)] leading-[0.98] tracking-[-0.02em] mb-12 md:mb-16"
+              className="text-[clamp(2.75rem,5.5vw,4.5rem)] leading-[1.02] tracking-[-0.02em] mb-12 md:mb-16"
             >
               <span className="italic font-light">The</span>{" "}
-              <span className="font-light">Press.</span>
+              <span className="font-bold">Press.</span>
             </motion.h2>
 
             <div className="flex flex-col divide-y divide-[#1f1f1f]">
@@ -368,7 +283,7 @@ export default function Home() {
                       {p.title}
                     </p>
                   </div>
-                  <p className="font-serif text-xl md:text-2xl mb-3">
+                  <p className="text-xl md:text-2xl font-semibold mb-3">
                     {p.where}
                   </p>
                   <p className="text-[14px] leading-[1.65] text-[#c8c8bf] max-w-xl">
@@ -395,28 +310,28 @@ export default function Home() {
       <footer className="relative px-6 md:px-16 pt-16 md:pt-24 pb-10 border-t border-[#1c1c1c]">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-end">
           <div className="md:col-span-7">
-            <p className="text-[10px] uppercase tracking-[0.28em] text-[#8a8a80] mb-4">
+            <p className="text-[13px] md:text-[15px] font-extrabold uppercase tracking-[0.24em] text-[#e6e6e0] mb-4">
               Get in Touch
             </p>
-            <h3 className="font-serif text-[clamp(2.25rem,5vw,4rem)] leading-[1] tracking-[-0.02em]">
+            <h3 className="text-[clamp(2.25rem,5vw,4rem)] leading-[1.02] tracking-[-0.02em]">
               <span className="italic font-light">Let&rsquo;s</span>{" "}
-              <span className="font-light">build something.</span>
+              <span className="font-bold">build something.</span>
             </h3>
           </div>
 
-          <div className="md:col-span-5 flex flex-col gap-3 text-[13px]">
+          <div className="md:col-span-5 flex flex-col gap-3">
             {socials.map((s) => (
               <a
                 key={s.label}
                 href={s.href}
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group flex items-center justify-between border-b border-[#1f1f1f] py-3 hover:border-[#3a3a34] transition-colors cursor-pointer"
+                className="group flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-[#1f1f1f] py-3 hover:border-[#3a3a34] transition-colors cursor-pointer"
               >
-                <span className="text-[10px] uppercase tracking-[0.24em] text-[#8a8a80] group-hover:text-white transition-colors">
+                <span className="text-[12px] md:text-[13px] font-extrabold uppercase tracking-[0.22em] text-[#c8c8bf] group-hover:text-white transition-colors">
                   {s.label}
                 </span>
-                <span className="font-serif italic text-lg group-hover:translate-x-1 transition-transform">
+                <span className="text-[15px] md:text-[17px] font-semibold text-[#e6e6e0] group-hover:text-white group-hover:translate-x-1 transition-all">
                   {s.href.startsWith("mailto:")
                     ? s.href.replace("mailto:", "")
                     : s.href.replace(/^https?:\/\//, "")}
