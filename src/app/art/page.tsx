@@ -123,31 +123,31 @@ export default function ArtPage() {
     <>
       <Nav />
       <main className="flex-1 bg-white">
-        <section className="relative min-h-[68svh] md:min-h-[78svh] flex items-end overflow-hidden text-white">
+        <section className="relative min-h-[46svh] md:min-h-[62svh] flex items-end overflow-hidden bg-white text-[#0f0f0f]">
           <Image
-            src="/art/civita-sunset.png"
-            alt="Civita di Bagnoregio at sunset — watercolor"
+            src="/art/ponte-sant-angelo.jpg"
+            alt="Ponte Sant'Angelo and Castel Sant'Angelo — pencil section drawing"
             fill
             priority
             sizes="100vw"
             className="object-cover"
-            style={{ objectPosition: "center 55%" }}
+            style={{ objectPosition: "center 50%" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/65 to-transparent" />
 
           <div className="relative w-full max-w-5xl mx-auto px-6 md:px-12 pb-14 md:pb-20 pt-32">
             <FadeIn>
-              <p className="text-[12px] md:text-[13px] font-extrabold uppercase tracking-[0.24em] text-white/80 mb-4">
+              <p className="text-[12px] md:text-[13px] font-extrabold uppercase tracking-[0.24em] text-black/55 mb-4">
                 Roman Palimpsest Program &nbsp;&middot;&nbsp; 2026
               </p>
             </FadeIn>
             <FadeIn delay={0.08}>
-              <h1 className="font-black text-[clamp(2.25rem,6.5vw,4.5rem)] leading-[0.98] tracking-[-0.02em] drop-shadow-[0_2px_24px_rgba(0,0,0,0.5)]">
+              <h1 className="font-black text-[clamp(2.25rem,6.5vw,4.5rem)] leading-[0.98] tracking-[-0.02em]">
                 Art
               </h1>
             </FadeIn>
             <FadeIn delay={0.16}>
-              <p className="mt-5 max-w-xl text-[14px] md:text-[15px] leading-[1.7] text-white/75">
+              <p className="mt-5 max-w-xl text-[14px] md:text-[15px] leading-[1.7] text-black/60">
                 Watercolors made across Italy during the UW Architecture in
                 Rome program, painted to slow down and learn how each place
                 actually feels.
