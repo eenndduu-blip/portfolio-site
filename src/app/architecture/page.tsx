@@ -102,10 +102,18 @@ export default function ArchitecturePage() {
                 href="/architecture/Endale_Bekele_Portfolio_2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-7 text-[12px] font-bold uppercase tracking-[0.18em] text-white hover:text-white/70 transition-colors cursor-pointer underline underline-offset-4"
+                className="group inline-block mt-9 md:mt-11 max-w-[14em] font-black uppercase tracking-[-0.01em] leading-[1.05] text-[clamp(1.75rem,5.5vw,3.5rem)] text-white hover:text-white/75 transition-colors cursor-pointer underline decoration-[0.06em] underline-offset-[0.14em] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]"
               >
-                Download Full PDF
-                <span aria-hidden>&rarr;</span>
+                Download Full{" "}
+                <span className="whitespace-nowrap">
+                  PDF
+                  <span
+                    aria-hidden
+                    className="inline-block ml-[0.3em] transition-[translate] duration-300 ease-out group-hover:translate-x-[0.2em]"
+                  >
+                    &rarr;
+                  </span>
+                </span>
               </a>
             </FadeIn>
           </div>
