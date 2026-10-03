@@ -99,7 +99,7 @@ export default function ArchitecturePage() {
             </FadeIn>
             <FadeIn delay={0.24}>
               <a
-                href="/architecture/Endale_Portfolio2026.pdf"
+                href="/architecture/Endale_Bekele_Portfolio_2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-7 text-[12px] font-bold uppercase tracking-[0.18em] text-white hover:text-white/70 transition-colors cursor-pointer underline underline-offset-4"
