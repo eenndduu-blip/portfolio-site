@@ -12,52 +12,44 @@ const pageRange = (start: number, end: number) =>
 
 const projects = [
   {
-    slug: "wa-starter-home",
+    slug: "rainier-beach-field-lab",
     number: "01",
-    title: "WA Starter Home Plan's Townhouse Design Competition",
-    year: "2026 · Honorable Mention",
-    tag: "4-3-2 Homes · Modular Townhouse Design",
-    pages: pageRange(3, 8),
-  },
-  {
-    slug: "rainier-beach",
-    number: "02",
     title: "Rainier Beach Water Quality Field Lab",
     year: "Winter 2025",
     tag: "ARCH 504 · University of Washington",
-    pages: pageRange(9, 18),
+    pages: pageRange(3, 12),
   },
   {
-    slug: "roots-nomas",
+    slug: "wa-starter-home",
+    number: "02",
+    title: "WA Starter Home Plan’s Townhouse Design Competition",
+    year: "2026 · Honorable Mention",
+    tag: "4-3-2 Homes · Modular Townhouse Design",
+    pages: pageRange(13, 18),
+  },
+  {
+    slug: "transitional-housing",
     number: "03",
-    title: "ROOTS of Community — NOMAs Student Competition",
-    year: "Spring 2025",
-    tag: "NOMAs Student Competition · Paseo West",
-    pages: pageRange(19, 28),
+    title: "Transitional Housing",
+    year: "September 2023",
+    tag: "Nonprofit Collaboration · Prefabricated Duplex Prototype",
+    pages: pageRange(19, 24),
   },
   {
-    slug: "gondar-hospital",
+    slug: "nomas-roots",
     number: "04",
-    title: "Gondar Specialized Hospital Campus Master Plan",
-    year: "September 2022",
-    tag: "Master Plan · Ethiopian Construction Design & Supervision Works",
-    pages: pageRange(29, 34),
+    title: "NOMAs Student Competition",
+    year: "Spring 2025",
+    tag: "ROOTS of Community · Paseo West, Kansas City",
+    pages: pageRange(25, 34),
   },
   {
-    slug: "roman-palimpsest-watercolor",
+    slug: "roman-palimpsest",
     number: "05",
-    title: "Roman Palimpsest — Watercolor Studies",
-    year: "Autumn 2025 · Part 1",
-    tag: "Study Abroad · Rome, IT",
-    pages: pageRange(35, 39),
-  },
-  {
-    slug: "isola-tiberina",
-    number: "06",
-    title: "Isola Tiberina — Hand-Drawn Conceptual Design",
-    year: "Autumn 2025 · Part 2",
-    tag: "Study Abroad · Rome, IT",
-    pages: pageRange(40, 43),
+    title: "Study Abroad — Roman Palimpsest, Italy",
+    year: "Autumn 2025",
+    tag: "Watercolor Studies & Isola Tiberina · Rome, IT",
+    pages: pageRange(35, 42),
   },
 ];
 
@@ -91,10 +83,10 @@ export default function ArchitecturePage() {
             </FadeIn>
             <FadeIn delay={0.16}>
               <p className="mt-5 max-w-xl text-[14px] md:text-[15px] leading-[1.7] text-white/75">
-                Six selected projects &mdash; housing, adaptive reuse, master
-                planning, and study abroad work. Each project is its own set
-                of pages: click to enlarge, or use the arrows to move
-                through it.
+                Five selected projects &mdash; civic research, modular housing,
+                transitional housing, community development, and study
+                abroad work. Each project is its own set of pages: click to
+                enlarge, or use the arrows to move through it.
               </p>
             </FadeIn>
             <FadeIn delay={0.24}>

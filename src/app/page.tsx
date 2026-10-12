@@ -14,6 +14,19 @@ const bioParagraphs = [
   "I'm an architectural designer, trained at the University of Washington, committed to designing places that people don't simply occupy — they remember.",
 ];
 
+const features = [
+  {
+    image: "/home/field-lab-atrium.jpg",
+    alt: "Field Lab atrium with curved terrazzo stair and reflecting pool",
+    caption: "Central atrium · Stair & reflecting pool",
+  },
+  {
+    image: "/home/field-lab-office.jpg",
+    alt: "Field Lab workspace looking out over the water",
+    caption: "Level 3 · Research workspace",
+  },
+];
+
 const works = [
   {
     number: "A.",
@@ -114,13 +127,13 @@ export default function Home() {
           className="absolute inset-0"
         >
           <Image
-            src="/site-plan-hero.jpg"
-            alt="Rainier Beach Water Quality Field Lab — site plan"
+            src="/home-hero-field-lab.jpg"
+            alt="Rainier Beach Water Quality Field Lab — hillside exterior at sunset"
             fill
             priority
             sizes="100vw"
             className="object-cover"
-            style={{ objectPosition: "center 40%" }}
+            style={{ objectPosition: "center 55%" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/55 to-[#0a0a0a]/20" />
           <div className="absolute inset-0 bg-[#0a0a0a]/25" />
@@ -197,6 +210,47 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="relative border-t border-[#1c1c1c]">
+        <div className="px-6 md:px-16 pt-24 md:pt-32">
+          <motion.p
+            {...inView(0.05)}
+            className="text-[13px] md:text-[15px] font-extrabold uppercase tracking-[0.24em] text-[#e6e6e0]"
+          >
+            Rainier Beach Water Quality Field Lab
+          </motion.p>
+          <motion.p
+            {...inView(0.12)}
+            className="mt-4 max-w-xl text-[14px] md:text-[15px] leading-[1.7] text-[#8a8a80]"
+          >
+            A civic research building on Lake Washington where water quality
+            work is put on public display.
+          </motion.p>
+        </div>
+
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1c1c1c]">
+          {features.map((f, i) => (
+            <motion.figure
+              key={f.image}
+              {...inView(0.1 + i * 0.1)}
+              className="relative m-0 bg-[#0a0a0a]"
+            >
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image
+                  src={f.image}
+                  alt={f.alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="px-6 md:px-8 py-5 text-[10px] uppercase tracking-[0.2em] text-[#8a8a80]">
+                {f.caption}
+              </figcaption>
+            </motion.figure>
+          ))}
         </div>
       </section>
 
