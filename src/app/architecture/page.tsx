@@ -60,7 +60,7 @@ export default function ArchitecturePage() {
       <main className="flex-1 bg-white">
         <section className="relative min-h-[68svh] md:min-h-[78svh] flex items-end overflow-hidden text-white">
           <Image
-            src="/architecture-hero.jpg"
+            src="/architecture-hero-atrium.jpg"
             alt="Interior atrium and stair — Rainier Beach Water Quality Field Lab"
             fill
             priority
