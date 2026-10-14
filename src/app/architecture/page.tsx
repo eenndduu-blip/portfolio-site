@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { ArchitectureBook } from "@/components/ArchitectureBook";
+import { ArchitectureFlipBook } from "@/components/ArchitectureFlipBook";
 import { FadeIn } from "@/components/motion-helpers";
 
 const pageUrl = (n: number) =>
@@ -136,7 +136,7 @@ export default function ArchitecturePage() {
             </div>
 
             <div className="pt-10 md:pt-14 pb-16 md:pb-24">
-              <ArchitectureBook pages={project.pages} label="Pages" />
+              <ArchitectureFlipBook pages={project.pages} label="Pages" />
             </div>
           </section>
         ))}
